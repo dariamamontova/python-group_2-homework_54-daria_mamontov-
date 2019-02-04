@@ -6,9 +6,9 @@ import AddTaskForm from './AddTaskForm/AddTaskForm.js'
 class App extends Component {
     state = {
         toDoList: [
-            {id: 1, text: 'О себе 1'},
-            {id: 2, text: 'О себе 2'},
-            {id: 3, text: 'О себе 3'}
+            {id: 1, text: 'Get up'},
+            {id: 2, text: 'Survive'},
+            {id: 3, text: 'Go back to bed'}
         ],
 
         currentTask: {text: ''},
@@ -62,9 +62,8 @@ class App extends Component {
 
     render() {
         return (
-            <div className="App">
-                <div>
-                    <h2>Добавить человека</h2>
+            <div className="App container">
+                <div className="my-5">
                     <AddTaskForm
                         task={this.state.currentTask}
                         onChangeInput={this.changeTaskInput}
